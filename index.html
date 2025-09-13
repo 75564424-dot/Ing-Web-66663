@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Reportería - Bodega Ficticia</title>
+  <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>Bodega Ficticia</h1>
+    <p class="slogan">Tu bodega de confianza, cerca de casa</p>
+    <nav>
+      <button class="nav-tab" data-section="dashboard">Dashboard</button>
+      <button class="nav-tab" data-section="catalogo">Catálogo</button>
+      <button class="nav-tab" data-section="gestion">Gestión</button>
+      <button class="nav-tab" data-section="reportes">Reportes</button>
+      <button class="nav-tab" data-section="publicidad">Publicidad</button>
+      <button class="nav-tab" data-section="contacto">Contacto</button>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <!-- Dashboard -->
+    <section id="dashboard" class="section active">
+      <h2>Panel Principal</h2>
+      <p>Bienvenido al sistema de reportería de <strong>Bodega Ficticia</strong>. Aquí podrás gestionar tu inventario, ventas y promociones de manera sencilla.</p>
+      <ul>
+        <li>📦 Control de productos y stock.</li>
+        <li>💰 Registro de ventas y entradas.</li>
+        <li>📊 Reportes claros y fáciles de entender.</li>
+        <li>🎯 Promociones y publicidad interna.</li>
+      </ul>
+    </section>
+
+    <!-- Catálogo -->
+    <section id="catalogo" class="section">
+      <h2>Catálogo de Productos</h2>
+      <p>Aquí podrás ver todos los productos disponibles en la bodega:</p>
+      <div id="productos-lista"></div>
+    </section>
+
+    <!-- Gestión -->
+    <section id="gestion" class="section">
+      <h2>Gestión de Inventario</h2>
+      <p>Agrega, edita o elimina productos según tu stock real.</p>
+      <button id="btn-nuevo-producto">➕ Agregar Producto</button>
+      <div id="formulario-producto" class="oculto">
+        <h3>Nuevo Producto</h3>
+        <form id="producto-form">
+          <label>
+            Nombre:
+            <input type="text" id="producto-nombre" placeholder="Ej: Arroz Costeño" required>
+          </label>
+          <label>
+            Precio (S/):
+            <input type="number" id="producto-precio" placeholder="Ej: 5.50" required>
+          </label>
+          <label>
+            Cantidad:
+            <input type="number" id="producto-cantidad" placeholder="Ej: 10" required>
+          </label>
+          <button type="submit">Guardar</button>
+          <button type="button" id="btn-cancelar">Cancelar</button>
+        </form>
+      </div>
+      <div id="gestion-lista"></div>
+    </section>
+
+    <!-- Reportes -->
+    <section id="reportes" class="section">
+      <h2>Reportes</h2>
+      <p>Revisa un resumen de tu inventario, ventas y rendimiento.</p>
+      <div id="reporte-contenido">
+        <p>📊 Aún no hay reportes disponibles. Registra productos y ventas para ver resultados.</p>
+      </div>
+    </section>
+
+    <!-- Publicidad -->
+    <section id="publicidad" class="section">
+      <h2>Publicidad y Promociones</h2>
+      <p>Aquí podrás registrar tus promociones y mostrarlas a tus clientes.</p>
+      <div id="publicidad-contenido">
+        <div class="promo">
+          <h3>✨ Oferta especial</h3>
+          <p>Compra 2 gaseosas Inca Kola de 1L y paga solo S/10.00</p>
+        </div>
+        <div class="promo">
+          <h3>🔥 Promoción de la semana</h3>
+          <p>Arroz + Aceite = Descuento del 10%</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+      <h2>Contacto</h2>
+      <p>Si tienes dudas o sugerencias, escríbenos:</p>
+      <form id="contacto-form">
+        <label>
+          Nombre:
+          <input type="text" id="contacto-nombre" placeholder="Tu nombre" required>
+        </label>
+        <label>
+          Mensaje:
+          <textarea id="contacto-mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </label>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Bodega Ficticia - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
